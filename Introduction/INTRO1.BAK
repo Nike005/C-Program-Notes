@@ -1,0 +1,319 @@
+/* Introduction to C Language:
+   -------------------------
+      C language was developed by "Dennis Ritchie" in the year 1972 at
+AT & T Bell laboratories in USA. C is also as "Structured Language".
+
+C Character Set:
+~~~~~~~~~~~~~~~~
+Alphabets : Both Upper case and Lower case
+
+Numbers   : 0 to 9
+
+Special Symbols : ~, @, !, $, %, ^, &, *
+
+C Tokens:
+---------
+1. Keywords
+2. Identifiers
+3. Constants
+4. Variables
+5. Operators
+
+1. Keywords:
+	All keyword have fixed meanings and these meanings
+ cannot be changed.Keywords are building block of the program.
+There are 32 keywords in C. They are,
+
+auto
+break
+case
+char
+const
+continue
+default
+do
+double
+else
+enum
+extern
+float
+for
+goto
+if
+int
+long
+register
+return
+short
+signed
+sizeof
+static
+struct
+switch
+typedef
+union
+unsigned
+void
+volatile
+while
+
+2. Identifier:
+	Identifier refers to the names of variable, functions and arrays.
+
+3. Constants:
+	Constants in C refers to fixed values that do not change during the
+execution  of the program.
+
+Types of Constants:
+a) Integer constant
+b) Real constant
+c) Sigle character constant
+d) String constant
+
+a) Integer constant:
+	  An integer constant refers to a sequence of digits.
+Ex:
+	434
+	545564
+	3
+	+546
+	-45
+b) Real constants:
+	These are represented by numbers containing fractional parts like
+34.456
+23.00
+
+c) Single character constant:
+	A single character constant contains a single character enclosed
+within single quotes.
+
+Ex:
+	'j'      'k'
+
+d) String character constant:
+	It is a sequence of characters enclosed with in double quotes.
+Ex:
+	"ifc"        "5345"   "#$$$"
+
+4. Variables:
+	A variable is a data name that may be used to store a data value.
+It remains changed during the execution of the program.
+
+Ex:
+	name
+	table_name
+	x_1
+
+
+Compiler:
+	It is used to compile the program. (Alt+F9)
+	To run the program - Ctrl+F9
+	To save the program - F2      Programname.c
+	To close the Edit Screen - Alt+X
+
+*/
+
+/*
+Header Files:
+#include<stdio.h> - Standard Input Output Header file.
+#include<conio.h> - Console Input Output Header file.
+
+Name        Datatypes   Control String
+------           ---------   --------------
+Integer       	int	       %d
+Float           float	       %f
+Character       char           %c
+String	        char	       %s
+
+Input Statement:
+----------------
+scanf("Control String",var_name);
+
+Output Statement:
+-----------------
+printf("Statement");
+printf("Control String",var_name);
+*/
+
+
+
+//Comment line
+
+/*C Program Structure:
+  ====================
+
+Header file
+Main function()
+{
+ variable declaration;
+ statement;
+}
+*/
+/*
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ printf("Welcome to c language");
+ getch();
+}*/
+
+/*Initialization:
+//      datatype var_name=value;
+
+	Ex:
+	      int x=23;*/
+/*
+	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 int a=10,b=20,c;
+	 clrscr();
+	 c=a+b;
+	 printf("The C value is :%d",c);
+	getch();								
+	} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ int a,b,c;
+ clrscr();
+ printf("Enter a b values:");
+ scanf("%d%d",&a,&b);        //scanf("Control stirng",var_name);
+ c=a+b;
+ printf("The answer is: %d",c);
+ getch();
+} */
+
+       /*Initialization
+	--------------
+		When we assign a value to a variable then it known as
+	initialization.
+	Syntax:
+		data_type var_name=value;
+	Ex:
+		int a=10;*/
+
+	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 int a=10;
+	 float b=10.43;
+	 char s[10]="computer";
+	 char c='j';
+	 clrscr();
+	 printf("Output\n");   //  \n - New line character
+	 printf("~~~~~~~\n\n\n\n");
+	 printf("The int val is :%d\n",a);
+	 printf("The float val is :%.2f\n",b);
+	 printf("The string is :%s\n",s);
+	 printf("The char is :%c",c);
+	 getch();
+	}
+
+	/*Declaration:
+	Syntax:
+		data_type var_name;
+	Ex:
+		int a;
+	*/
+/*	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 int a;
+	 clrscr();
+	 printf("Enter the a val:\n");
+	 scanf("%d",&a);
+	 printf("The a val is:%d",a);
+	 getch();
+	}
+  */
+/*
+	  #include<stdio.h>
+	  #include<conio.h>
+	  void main()
+	  {
+	   int a;
+	   float b;
+	   char s[10];
+	   clrscr();
+	   printf("Enter the int val:");
+	   scanf("%d",&a);
+	   printf("Enter the float val:");
+	   scanf("%f",&b);
+	   printf("Enter the string:");
+	   scanf("%s",s);
+	   printf("Output\n");
+	   printf("~~~~~~~\n");
+	   printf("The int val is:%d\n",a);
+	   printf("The float val is:%.2f\n",b);
+	   printf("The string is :%s",s);
+	   getch();
+	  }                            */
+/*
+	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 int a,b,c;
+	 clrscr();
+	 printf("Enter a,b values:");
+	 scanf("%d%d",&a,&b);
+	 c=a+b;
+	 printf("The result is :%d",c);
+	 getch();
+	}                          */
+/*
+	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 int p,n;
+	 float r,si,tot;
+	 clrscr();
+	 printf("Enter the principal amount:");
+	 scanf("%d",&p);
+	 printf("Enter the no of months:");
+	 scanf("%d",&n);
+	 printf("Enter the Interest:");
+	 scanf("%f",&r);
+	 si=p*n*r/100;
+	 tot=p+si;
+	 printf("The simple interest is %.2f\n ",si);
+	 printf("The total amount is %.2f",tot);
+	 getch();
+	}          */
+
+
+
+
+
+
+
+
+
+
+
+
+

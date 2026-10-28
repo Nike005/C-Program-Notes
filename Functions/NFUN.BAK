@@ -1,0 +1,30 @@
+/*Nesting of functions:
+	If one function inside the other one is known as Nesting of functions.
+Example:     */
+
+#include<stdio.h>
+#include<conio.h>
+void msg();
+void print();
+void dis();
+void main()
+{
+clrscr();
+printf("Welcome\n");
+msg();
+getch();
+}
+void msg()
+{
+printf("To nesting of functions\n");
+print();
+}
+void print()
+{
+printf("Thank you");
+dis();
+}
+void dis()
+{
+printf("this is in display ()");
+}

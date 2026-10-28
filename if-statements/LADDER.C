@@ -1,0 +1,96 @@
+//4)if....else ladder:
+/*	Syntax:
+	if(condition 1)
+	{
+	 statement 1;
+	}
+	else
+	if(condition 2)
+	{
+	 statement 2;
+	}
+	else
+	if (condition 3)
+	{
+	 statement 3;
+	}
+	.
+	.
+	.
+	if(condition n)
+	{
+	 statement n;
+	}*/
+ /*
+	#include<stdio.h>
+	#include<conio.h>
+	void main()
+	{
+	 float avg;
+	 clrscr();
+	 printf("Enter your average:");
+	 scanf("%f",&avg);
+	 if(avg>=75)
+	 {
+	  printf("Honour");
+	 }
+	 else
+	 if(avg>=60)
+	 {
+	  printf("First Grade");
+	 }
+	 else
+	 if(avg>=40)
+	 {
+	  printf("Second Grade");
+	 }
+	 else
+	 if(avg<40)
+	 {
+	  printf("Third Grade");
+
+	  }
+	  getch();
+	 }
+	 */
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int cusno,units;
+float charges;
+clrscr();
+printf("Enter the cusno,units");
+scanf("%d%d",&cusno,&units);
+if(units<=100)
+{
+charges=0.40*units;
+}
+else
+if(units<=200)
+{
+charges=50+0.80*(units-100);
+}
+else
+if(units<=300)
+{
+charges=100+1.50*(units-200);
+}
+else
+if(units>300)
+{
+charges=150+2*(units-300);
+}
+printf("The charge is %.2f",charges);
+getch();
+}

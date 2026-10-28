@@ -1,0 +1,127 @@
+/*
+Switch case statement:
+----------------------
+	If we want to execute no of cases we use switch case statement.
+
+Syntax:
+	switch(condition)
+	{
+	case 1:
+		statement 1;
+		break;
+	case 2:
+		statement 2;
+		break;
+	................
+	..............
+	case n:
+		statement n;
+		break;
+	default:
+	}
+Example:
+  */
+  /*
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int choice;
+clrscr();
+printf("Enter your choice");
+scanf("%d",&choice);
+switch (choice)
+{
+case 1:
+	printf("The day is sunday");
+	break;
+case 2:
+	printf("The day is monday");
+	break;
+case 3:
+	printf("The day is tuesday");
+	break;
+case 4:
+	printf("The day is wednesday");
+	break;
+case 5:
+	printf("The day is thursday");
+	break;
+case 6:
+	printf("The day is friday");
+	break;
+case 7:
+	printf("The day is saturday");
+	break;
+default:
+	printf("Please enter any number between 1 to 7");
+}
+getch();
+}   */
+//========================================================
+/*
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ char s;
+ clrscr();
+ printf("Enter any character:");
+ scanf("%c",&s);
+ switch(s)
+ {
+  case 'a':
+  case 'A':
+	printf("A is a vowel");
+	break;
+  case 'e':
+  case 'E':
+	printf("E is a vowel");
+	break;
+  case 'i':
+  case 'I':
+	printf("I is a vowel");
+	break;
+  case 'o':
+  case 'O':
+	printf("O is a vowel");
+	break;
+  case 'u':
+  case 'U':
+	printf("U is a vowel");
+	break;
+  default:
+	printf("Please enter a vowel character");
+  }
+  getch();
+ }     */
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int a,b,ch;
+   clrscr();
+   printf("Enter the a,b values");
+   scanf("%d%d",&a,&b);
+   printf("Enter ur choice");
+   scanf("%d",&ch);
+   switch(ch)
+   {
+	case 1:
+		printf("Addition is %d",a+b);
+		break;
+	case 2:
+		printf("Subraction is %d",a-b);
+		break;
+	case 3:
+		printf("Multiplication is %d",a*b);
+		break;
+	case 4:
+		printf("Division is %d",a/b);
+		break;
+	default:
+		printf("Please enter correct choice");
+   }
+   getch();
+}
