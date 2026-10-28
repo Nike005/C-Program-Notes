@@ -1,0 +1,16 @@
+/* add a two number sum */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b,*c=&a,*d=&b;
+	clrscr();
+	printf("\nEnter Two Number to be summed:");
+	scanf("%d %d",c,d);
+	printf("\nc values is :%d",*c);
+	printf("\nc Address is :%u",c);
+	printf("\nd values is :%d",*d);
+	printf("\nd Address is :%u",&d);
+	printf("\nThe sum of Two Number :%d",*c+*d);
+	getch();
+}

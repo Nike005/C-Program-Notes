@@ -1,0 +1,17 @@
+#include"stdio.h"
+main()
+{
+   int a,b;
+   char ch,*str;
+   clrscr();
+   str=" Welcome To IFC ";
+   printf("\n Enter The val :");
+   scanf("%d%d",&a,&b);
+   printf("\n The A B value :%d %d",a,b);
+
+/* printf("\n Enter The string :");
+   scanf("%s",str);              */
+
+   printf("\n The String : %s",str);
+   getch();
+}

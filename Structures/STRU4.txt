@@ -1,0 +1,36 @@
+/* Employee Pay Slip for array used */
+#include<stdio.h>
+#include<conio.h>
+struct employee
+	{
+		int eno;
+		char ename[25];
+		int bpay;
+	}a[2];
+void main()
+{
+	int i=0;
+	clrscr();
+	while(i<3)
+	{
+		printf("\n Employee No :",i+1);
+		scanf("%d",&a[i].eno);
+		printf("\n Employee Name :",i+1);
+		scanf("%s",&a[i].ename);
+		printf("\n Employee Bpay :",i+1);
+		scanf("%d",&a[i].bpay);
+		i++;
+	}
+	i=0;
+
+        printf("\n\tEno  \tEname  \tBpay ");
+	while(i<3)
+	{
+
+		printf("\n\t%d \t%s \t%d",a[i].eno,a[i].ename,a[i].bpay);
+	  i++;
+	}
+	getch();
+
+
+}

@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	struct employee
+	{
+		int sno;
+		char name[25];
+		char dept[25];
+		int salary;
+	};
+	struct employee e={101,"Kumar","Computer",5000};
+	struct employee e1={102,"Raju","Commerce",6000};
+	struct employee e3;
+	e3.sno=103;
+	strcpy(e3.name,"Rajendran");
+	strcpy(e3.dept,"Computer");
+	e3.salary=5000;
+	clrscr();
+	printf("\n    \tSno    \tName  \tDept      \tSalary");
+	printf("\n\t%d \t%s \t%s \t%d",e.sno,e.name,e.dept,e.salary);
+	printf("\n\t%d \t%s \t%s \t%d",e1.sno,e1.name,e1.dept,e1.salary);
+	printf("\n\t%d \t%s \t%s \t%d",e3.sno,e3.name,e3.dept,e3.salary);
+	getch();
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

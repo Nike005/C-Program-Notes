@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+#include<process.h>
+#include<dos.h>
+void main()
+{
+	struct time t;
+	struct date d;
+	clrscr();
+	printf("\t\t\tDisplay System Date & Time \t\t\t\n");
+	gettime(&t);
+	getdate(&d);
+	printf("\n Time is =%2d : %2d:%2d",t.ti_hour,t.ti_min,t.ti_sec);
+	printf("\n Date is =%d-%d-%d",d.da_day,d.da_mon,d.da_year);
+	return(0);
+	}
+

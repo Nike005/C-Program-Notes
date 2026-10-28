@@ -1,0 +1,16 @@
+
+x/* display pointer value and address */
+#include<stdio.h>
+#include<stdio.h>
+void main()
+{
+	int n;
+	int *m=n;
+	m=15;
+	clrscr();
+	printf("\nM Values is :%d",m);
+	printf("\n15 Address is:%u",*m);
+	printf("\nN values is :%u",&n);
+	printf("\nM own Address is:%u",&m);
+	getch();
+}

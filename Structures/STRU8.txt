@@ -1,0 +1,39 @@
+/* Struct to structure data pass */
+
+#include<stdio.h>
+void main()
+{
+	struct address
+	{
+		char name[20];
+		char add[20];
+		char city[20];
+		long phone;
+	};
+	struct emp
+	{
+		int eno;
+		struct address a;
+	};
+	struct emp e[100];
+	int i;
+	clrscr();
+	printf("\nEnter Emono ,Name, Address, City, Phone\n");
+	for(i=0;i<1;i++)
+	{
+		scanf("%d %s %s %s %ld",&e[i].eno,e[i].a.name,e[i].a.add,e[i].a.city,e[i].a.phone);
+	}
+	line();
+	printf("\nEno \tName   \tAddress \tCity \tPhone");
+	line();
+	for(i=0;i<1;i++)
+	{
+		printf("\n%d\t%s\t%s\t\t%s\t%ld\n",e[i].eno,e[i].a.name,e[i].a.add,e[i].a.city,e[i].a.phone);
+	}
+	line();
+	getch();
+}
+line()
+{
+printf("\n----------------------------------------------------------");
+}

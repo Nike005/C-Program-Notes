@@ -1,0 +1,578 @@
+		--------------------------
+		******	 structure   *****
+		--------------------------
+
+*  The structure must define by the name "struct" then you declare
+   the structure_name then define the variable.
+
+*  The structure start with the "{ "  (open brase), end with the "}"
+   (end brase).
+
+*  After the end brase we have to put the ; (semicolon),
+   then we have to create the object in function main.
+   ex:
+      struct csc
+      {
+	int age;
+	int num;
+      }
+      main()
+      {
+	struct struct_name obj1,obj2,...;
+      }
+
+*  (or)
+   After the end brase create the object_name then put semicolon.
+   ex:
+      struct csc
+      {
+	int num;
+	int age;
+      }obj1,obj2...;
+      main()
+      {
+	scanf("%d%d",obj1.num,obj2.age);
+      }
+
+Type 1:
+	struct name1
+	{
+	  datatype;
+          datatype;
+	  datatype;
+
+	 } object1,obj2,obj3...;
+
+	 main()
+	 {
+	     Statement;
+	     structure using;
+	 }
+
+Type 2:
+	struct name2
+	{
+	 data type;
+	 };
+	main()
+	{
+	  struct name2 obj1,...;
+	}
+
+
+Type 3:
+	struct name3
+	{
+	  data type;
+	}
+	main()
+	{
+	  static struct name3 obj1={value};
+	}
+
+ #include<stdio.h>
+ struct shop
+ {
+ char name[25];
+ int rate;
+ char author[25];
+ int quan;
+ };
+ main()
+ {
+    static struct shop obj={"C_Language",100,"Balagurusamy",3};
+    clrscr();
+
+    printf("\n The Name: %s \n Rate : %d \n Author : %s \n Quan : %d",obj.name,obj.rate,obj.author,obj.quan);
+
+    getch();
+ }
+
+
+
+
+
+
+
+
+
+/* structure
+
+	struct any_name
+	{
+	  datatype;
+          datatype;
+	  datatype;
+
+	 } object1,obj2,obj3...; */
+
+ #include<stdio.h>
+ struct shop
+ {
+ char name[25];
+ int rate;
+ char author[25];
+ int quan;
+ }; /*tamil,eng,math;*/
+ main()
+ {  /* struct struct_name obj1,obj2,obj3,...; */
+    struct shop tamil,eng,math;
+    clrscr();
+
+    printf("enter the tamil book title & Rate: ");
+    scanf("%s%d",tamil.name,&tamil.rate);
+
+    printf("Enter the English Book Title & Rate :");
+    scanf("%s%d",eng.name,&eng.rate);
+
+    printf("Enter the Maths Book Title & Rate :");
+    scanf("%s%d",math.name,&math.rate);
+
+    printf("\n The Name & Rate :%s & %d",tamil.name,tamil.rate);
+    printf("\n THe Name & Rate :%s & %d",eng.name,eng.rate);
+    printf("\n The Name & Rate :%s & %d",math.name,math.rate);
+
+    getch();
+ }
+
+
+Example:1
+
+#include  <stdio.h>
+
+struct book
+{
+  char name;
+  int pageno;
+  float price;
+};
+main()
+{
+ struct book b1;
+
+ clrscr();
+ printf("Input\n");
+ printf("\n Enter the name,pageno,price");
+ scanf("%c %d %f",&b1.name,&b1.pageno,&b1.price);
+ printf("\nOutput");
+ printf("\n%c %d %f",b1.name,b1.pageno,b1.price);
+
+ getche();
+}
+
+Example:2
+#include  <stdio.h>
+struct book
+{
+  char name;
+  int pageno;
+  float price;
+};
+main()
+{
+ struct book b1,b2;
+
+ clrscr();
+ printf("Input\n");
+ printf("\n Enter the name,pageno,price");
+ scanf("%c %d %f",&b1.name,&b1.pageno,&b1.price);
+  printf("\n Enter the name,pageno,price");
+  fflush(stdin);
+ scanf("%c %d %f",&b2.name,&b2.pageno,&b2.price);
+ printf("\nOutput");
+ fflush(stdout);
+ printf("\n%c %d %f",b1.name,b1.pageno,b1.price);
+ printf("\n%c %d %f",b2.name,b2.pageno,b2.price);
+
+ getche();
+}
+
+Example:3
+
+/* stuture using initialisation variables */
+#include  <stdio.h>
+struct book
+{
+  char name;
+  int pageno;
+  float price;
+};
+main()
+{
+ static struct book b1={'a',100,45.55};
+ clrscr();
+ printf("\nOutput");
+ printf("\n%c %d %f",b1.name,b1.pageno,b1.price);
+
+ getche();
+}
+
+Example :4
+/* stuture using initialisation variables and inside main */
+#include  <stdio.h>
+main()
+{
+struct book
+{
+  char name;
+  int pageno;
+  float price;
+};
+ static struct book b1={'a',100,45.55};
+ clrscr();
+ printf("\nOutput");
+ printf("\n%c %d %f",b1.name,b1.pageno,b1.price);
+
+ getche();
+}
+
+Example :5
+
+/* stuture using array */
+#include  <stdio.h>
+main()
+{
+ struct
+ {
+  char name;
+  int pageno;
+  int price;
+}b[2];
+ int i;
+ for(i=1;i<=2;i++)
+ {
+  printf("\nEnter the name,pageno,and price for %d item  :" ,i);
+  fflush(stdin);
+  scanf("%c %d %d",&b[i].name,&b[i].pageno,&b[i].price);
+ }
+
+ clrscr();
+ printf("\nOutput");
+ printf("\n \t name \tpageno \tprice");
+ fflush(stdout);
+ for(i=1;i<=2;i++)
+ {
+  printf("\n \t %c \t %d \t %d",b[i].name,b[i].pageno,b[i].price);
+ }
+ getche();
+}
+
+Example :6
+
+/* passing a individual element stuture  */
+#include  <stdio.h>
+ struct book
+ {
+  char name;
+  int pageno;
+  int price;
+};
+main()
+{
+
+ struct book b={'a',100,34};
+ func(b.name,b.pageno,b.price);
+ getche();
+}
+
+func(n,p,pr)
+char n;
+int p,pr;
+{
+  clrscr();
+ printf("\nOutput");
+ printf("\n \t name \tpageno \tprice");
+ printf("\n \t %c \t %d \t %d",n,p,pr);
+}
+
+Example:7
+
+
+/* struture using pointers */
+#include  <stdio.h>
+ struct book
+ {
+  char name;
+  int pageno;
+  int price;
+};
+main()
+{
+ struct book b={'a',100,34};
+ struct book *p;
+ p=&b;
+ clrscr();
+ printf("\nOutput");
+ printf("\n \t name \tpageno \tprice");
+ printf("\n \t %c \t %d \t %d",b.name,b.pageno,b.price);
+ printf("\n \t %c \t %d \t %d",p->name,p->pageno,p->price);
+ getche();
+}
+
+Example:8
+
+/* passing a individual element stuture  */
+#include  <stdio.h>
+ struct book
+ {
+  char name;
+  int pageno;
+  int price;
+};
+main()
+{
+
+ struct book b={'a',100,34};
+ func(b);
+ getche();
+}
+
+func(c)
+struct book c;
+{
+  clrscr();
+ printf("\nOutput");
+ printf("\n \t name \tpageno \tprice");
+ printf("\n \t %c \t %d \t %d",c.name,c.pageno,c.price);
+ }
+
+Example :9
+/* passing a individual element stuture  */
+#include  <stdio.h>
+ struct book
+ {
+  char name;
+  int pageno;
+  int price;
+};
+main()
+{
+ struct book b={'a',100,34};
+ func(&b);
+ getche();
+}
+
+func(c)
+struct book *c;
+{
+ clrscr();
+ printf("\nOutput");
+ printf("\n \t name \tpageno \tprice");
+ printf("\n \t %c \t %d \t %d",c ->name,c->pageno,c->price);
+}
+
+Example: 10
+
+#include <stdio.h>
+struct employee
+{
+ char name[10];
+ int eno;
+};
+struct allowance
+{
+  float bp;
+  char dept;
+  struct employee e1;
+};
+main()
+{
+  struct allowance a1;
+  clrscr();
+  fflush(stdin);
+  printf("enter eno and dept");
+  scanf("%d %c",&a1.e1.eno,&a1.dept);
+  printf("eno = %d",a1.e1.eno);
+  printf("dept = %c",a1.dept);
+getche();
+}
+
+Example:11
+
+#include"stdio.h"
+struct book
+{
+   char *name;
+   int rate;
+};
+
+main()
+{  struct book obj1,obj2;
+
+    printf("\n Enter 1st book name & rate :");
+    scanf("%s%d",obj1.name,&obj1.rate);
+
+    printf("\n Enter 2nd book name & rate :");
+    scanf("%s%d",obj2.name,&obj2.rate);
+    printf("\n Enter 2nd book name & rate :%s & %d",obj1.name,obj1.rate);
+    printf("\n Enter 2nd book name & rate :%s & %d",obj2.name,obj2.rate);
+    getch();
+    getch();
+}
+
+Example :12
+
+struct Phone
+{
+ char name[25];
+ long int  phno;
+};
+static struct Phone s[100];
+int i=-1;
+main()
+{
+ int n;
+ void add();
+ void view();
+ void modify();
+ void delete();
+ while(1)
+ {
+ clrscr();
+ printf("\n 1.  Add   Record ");
+ printf("\n 2. View   Record ");
+ printf("\n 3. Modify Record ");
+ printf("\n 4. Delete Record ");
+ printf("\n 5. Exit   ");
+ printf("\n Enter the Option (1..5) ");
+ scanf("%d",&n);
+
+ switch(n)
+ {
+  case 1:     add();
+	      break;
+  case 2:     view();
+	      break;
+  case 3:     modify();
+	      break;
+  case 4:     delete();
+	      break;
+  case 5:     exit(1);
+  default:    printf("\n Invalid choice");
+	      getche();
+ }
+}
+}
+
+void add()
+{
+  clrscr();
+  printf("============================================\n");
+  printf("   A D D I N G    R E C O R D               \n");
+  printf("============================================\n");
+  i++;
+  printf("\n Enter the Name of Person & Phone Number  :\n");
+  scanf("%s%ld",s[i].name,&s[i].phno);
+}
+void view()
+{
+  int n;
+  clrscr();
+  printf("============================================\n");
+  printf("   V I E W I N G      R E C O R D           \n");
+  printf("============================================\n");
+  printf("\n============================================\n");
+  printf("Employee Name         Phone Number \n");
+  printf("============================================\n");
+  for(n=0;n<=i;n++)
+  printf("\n %10s  %21ld",s[n].name,s[n].phno);
+  getche();
+}
+
+void modify()
+{
+  int n,found=0;
+  char temp[25];
+  clrscr();
+  printf("============================================\n");
+  printf("   M O D I F Y        R E C O R D           \n");
+  printf("============================================\n");
+  printf("\n Enter the String to Search   :\n");
+  scanf("%s",temp);
+  for(n=0;n<=i;n++)
+  {
+  if(strcmp(s[n].name,temp)==0)
+  {
+   found=1;
+   printf("\n Enter the New Name and Phone Number  :\n");
+   scanf("%s%ld",s[n].name,&s[n].phno);
+   break;
+  }
+  }
+  if(found==0)
+    printf("\n -- The Record is Not found --");
+    getche();
+}
+
+
+void delete()
+{
+  int n,found=0,c=0;
+  char temp[25];
+  struct Phone t[100];
+  clrscr();
+  printf("============================================\n");
+  printf("   D E L E T E        R E C O R D           \n");
+  printf("============================================\n");
+
+  printf("\n Enter the String to Delete \n");
+  scanf("%s",temp);
+  for(n=0;n<=i;n++)
+  {
+    if(strcmp(s[n].name,temp)==0)
+	found=1;
+    else
+    {
+      strcpy(t[c].name,s[n].name);
+      t[c].phno=s[n].phno;
+      c++;
+    }
+  }
+
+  if(found==0)
+  {
+    printf("\n-- The Record is Not found --");
+    getche();
+  }
+  else
+  {
+
+     for(n=0;n<c;n++)
+     {
+      strcpy(s[n].name,t[n].name);
+      s[n].phno=t[n].phno;
+     }
+     i=c-1;
+  }
+}
+
+
+Example:
+
+/* Inventory System  */
+struct  inventory
+{
+  int pno,qty;
+  char pname[20];
+  float price;
+};
+main()
+{
+ struct inventory in[10];
+
+ int i,t;
+ float subtot=0;
+
+ clrscr();
+ printf("\n Enter the Part Number ,Part Name, Price & Qty   ");
+
+ for(i=0;i<3;i++)
+ {
+ scanf("%d%s%f%d",&in[i].pno,in[i].pname,&in[i].price,&in[i].qty);
+ t=in[i].price * in[i].qty;
+ subtot=subtot + t;
+ }
+  printf("\n sub Total   %f ",subtot);
+  getche();
+ }
+

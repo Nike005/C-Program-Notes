@@ -1,0 +1,28 @@
+/*2)Strcmp();
+	It is a string library function which is used to compare two strings
+together wheather it is equal or not.
+	It checks character by character with the help of ASCII(American
+Standard Code for International Interchange) code and it returns the
+numerical difference between the two characters.If it is equal
+it will return zero otherwise non-zero values.*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int x;
+char name1[10],name2[10];
+clrscr();
+printf("Enter any two strings\n");
+scanf("%s%s",name1,name2);
+x=strcmp(name1,name2);
+if(x==0)
+{
+printf("Strings are equal");
+}
+else
+{
+printf("Strings are not equal");
+}
+getch();
+
+}

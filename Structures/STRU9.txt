@@ -1,0 +1,26 @@
+5#include<stdio.h>
+#include<string.h>
+void main()
+{
+	int n=3333;
+	char t='c';
+	float b=99.99;
+	struct account
+	{
+		int accno;
+		char acctype;
+		char name[30];
+		char street[30];
+		char city[30];
+		float balance;
+		long lastpayment;
+	}customer,*pc=&customer;
+	clrscr();
+	customer.accno=n;
+	customer.acctype=t;
+	strcpy(customer.name,"Kumar");
+	customer.balance=b;
+	printf("%d %c %s %f \n",pc->accno,pc->acctype,pc->name,*pc->balance);
+	getch();
+	}
+

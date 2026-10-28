@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a[]={5,10,15,20,25};
+	int *p=a;
+	int i,j;
+	printf("\nAddress of array elements");
+	printf("\nThrought elements");
+	for(i=0;i<5;i++)
+	printf(&a[i]);
+	printf("\nThrought array name");
+	for(i=0;i<5;i++)
+	printf(a+i);
+	printf(\nThrought integer pointer");
+	for(i=0;i<5;i++)
+	printf(p++);
+	getch();
+getch();
+}
+
+

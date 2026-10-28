@@ -1,0 +1,24 @@
+/* get a pointer value and address */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n;
+	int *m=&n;
+	clrscr();
+	printf("\Enter an integer");
+	scanf("%d",n);
+	printf("\nValue of n :%d",n);
+	printf("\nValue of m :%d",*m);
+
+	printf("\nValue of n :%u",&n);
+	printf("\nValue of m :%u",&m);
+
+	n*=2;
+	printf("\n New value of n:%d",n);
+	printf("\n New value of m:%d",*m);
+	*m*=2;
+	printf("\n New value of n:%u",&n);
+	printf("\n New value of m:%u",&m);
+	getch();
+}

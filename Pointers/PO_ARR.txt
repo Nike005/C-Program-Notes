@@ -1,0 +1,15 @@
+#include<stdio.h>
+main()
+{
+  int a[5]={10,20,30,40,50},*ptr,i;
+  clrscr();
+  ptr=&a[0];
+  for(i=0;i<5;i++)
+  {
+  printf("\n The Value Is : %d",*ptr);
+  ptr=ptr+1;
+  }
+  getch();
+}
+
+

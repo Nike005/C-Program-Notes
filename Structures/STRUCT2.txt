@@ -1,0 +1,106 @@
+		--------------------------
+		******	 structure   *****
+		--------------------------
+
+*  The structure must define by the name "struct" then you declare
+   the structure_name then define the variable.
+
+*  The structure start with the "{ "  (open brase), end with the "}"
+   (end brase).
+
+*  After the end brase we have to put the ; (semicolon),
+   then we have to create the object in function main.
+
+ Structure Syntax:
+	struct <structure Name>
+	{
+		data types;
+	};
+	struct <variable Name> <instance Name>;
+
+Example:
+      struct csc
+      {
+	int age;
+	char name[20];
+	int num;
+      }
+      main()
+      {
+	struct struct_name obj1,obj2,...;
+      }
+
+*  (or)
+   After the end brase create the object_name then put semicolon.
+   ex:
+      struct csc
+      {
+	int num;
+	int age;
+      }obj1,obj2...;
+      main()
+      {
+	scanf("%d%d",obj1.num,obj2.age);
+      }
+
+Type 1:
+	struct name1
+	{
+	  datatype;
+          datatype;
+	  datatype;
+
+	 } object1,obj2,obj3...;
+
+	 main()
+	 {
+	     Statement;
+	     structure using;
+	 }
+
+Type 2:
+	struct name2
+	{
+	 data type;
+	 };
+	main()
+	{
+	  struct name2 obj1,...;
+	}
+
+
+Type 3:
+	struct name3
+	{
+	  data type;
+	}
+	main()
+	{
+	  static struct name3 obj1={value};
+	}
+
+-------------------------------------------------------------------
+ Example:
+
+
+ #include<stdio.h>
+ struct shop
+ {
+ char name[25];
+ int rate;
+ char author[25];
+ int quan;
+ };
+ main()
+ {
+    static struct shop obj={"C_Language",100,"Balagurusamy",3};
+    clrscr();
+
+    printf("\n The Name: %s \n Rate : %d \n Author : %s \n Quan : %d",obj.name,obj.rate,obj.author,obj.quan);
+
+    getch();
+ }
+
+
+
+

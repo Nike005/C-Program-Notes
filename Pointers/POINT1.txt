@@ -1,0 +1,19 @@
+/* display pointer value and address */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int *a,b;
+	b=10;
+	a=&b;
+	clrscr();
+	printf("\nThe B value  is :%d",b);
+	printf("\nB Own Address :%u\n",&b);
+
+	printf("\nA value is :%d",*a);
+	printf("\nA Address is :%u",a);
+	printf("\nA Own address is :%u",&a);
+	*a=*a+1;
+	printf("\nB values is :%d",b);
+	getch();
+}

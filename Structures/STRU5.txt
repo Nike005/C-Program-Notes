@@ -1,0 +1,68 @@
+/* Sturct used for Array and Switch case */
+
+#include<stdio.h>
+#include<conio.h>
+struct new
+	{
+		char name[20],grade,desig[15];
+		int basic,allow;
+	};
+void main()
+{
+	struct new off[5];
+	int i,j;
+	char choice='y';
+	clrscr();
+	for(i=0;i<1;i++)
+	{
+		printf("\n\a Enter the Name :");
+		scanf("%s",off[i].name);
+		fflush(stdin);
+		printf("\n\a Enter the Basic Pay :");
+		scanf("%d",&off[i].basic);
+		fflush(stdin);
+		printf("\n\a Enter the Grade [A/B/C]:");
+		scanf("%c",&off[i].grade);
+	}
+	clrscr();
+	for(i=0;i<1;i++)
+	{
+	 switch(off[i].grade)
+	 {
+		case 'a':
+			off[i].allow=450;
+			strcpy(off[i].desig,"Manager");
+			printf("\n\a Name               :%s",off[i].name);
+			printf("\n\a Basic              :%d",off[i].basic);
+			printf("\n\a Design             :%s",off[i].desig);
+			printf("\n\a Allow		:%d",off[i].allow);
+			break;
+	      case 'b':
+			off[i].allow=350;
+			strcpy(off[i].desig,"Senior Officer");
+			printf("\n\a Name               :%s",off[i].name);
+			printf("\n\a Basic              :%d",off[i].basic);
+			printf("\n\a Design             :%s",off[i].desig);
+			printf("\n\a Allow		:%d",off[i].allow);
+			break;
+	      case 'c':
+			off[i].allow=250;
+			strcpy(off[i].desig,"Clerk");
+			printf("\n\a Name               :%s",off[i].name);
+			printf("\n\a Basic              :%d",off[i].basic);
+			printf("\n\a Design             :%s",off[i].desig);
+			printf("\n\a Allow		:%d",off[i].allow);
+			break;
+	      default:
+			printf("\nNot Eligiable for Allowance");
+			break;
+		      }
+	      printf("\n");
+	      getch();
+	 }
+	}
+
+
+
+
+

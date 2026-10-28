@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	struct employee
+	{
+		char name[25];
+		int age;
+		int salary;
+	};
+	struct employee e = {"Ram",24,2500};
+	printf("\n Name  :%s",e.name);
+	printf("\n Age   :%d",e.age);
+	printf("\n Salary:%d",e.salary);
+	getch();
+}

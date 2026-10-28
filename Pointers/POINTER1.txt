@@ -1,0 +1,82 @@
+
+Pointer :
+	pointer are variable that contain address.pointer start with * symbol.
+	variable value assign to pointer with & symbol.
+	pointer variable are declared as :
+			Syn:
+			    data type *variable_name;
+	variable assign to pointer:
+		ptr_name=&var_name;
+
+		Ex1:
+		      ptr=&num;
+		Ex2:
+		     int a,*ptr=&a;
+
+
+	#include<stdio.h>
+	main()
+	{
+	  int x,*ptr;
+	  ptr=&x;
+	  printf(" Enter an integer :");
+	  scanf("%d",ptr);
+	  printf("\n The value : %d",x);
+	  getch();
+	}
+
+Character pointer :
+      character pointer is a pointer  to the character. It can be declared as:
+		char *ptr_name;
+     string:
+	 char *ptr_name="Welcome to all";
+
+
+       #include<stdio.h>
+       main()
+       {
+
+	 int num1,num2,*ptr;
+	 char *name="Computer";
+	 clrscr();
+	 printf("Enter the num1 :");
+	 scanf("%d",&num1);
+	 printf("\nEnter the num2 :");
+	 scanf("%d",&num2);
+	 ptr=&num1;
+	 *ptr=*ptr*num2;
+	 printf("the name :%s\n The num1 :%d The num2 :%d",name,*ptr,num2);
+
+	 getch();
+	 }
+
+
+#include<stdio.h>
+main()
+{
+  int a;
+  printf(" Enter a Letter :");
+  scanf("%c",&s
+
+
+ #include<stdio.h>
+ #include<ctype.h>
+ #include<stdlib.h>
+ main()
+ {
+  /* float i=1;*/
+   char val;
+   clrscr();
+   printf("enter a letter ");
+   scanf("%c",&val);
+/*   i=i+2.5; */
+   if(islower(val))
+   printf("Lower Case");
+   else
+   printf("Upper Case ");
+   printf(" The value : %d",val);
+/*   printf("Absolute :%f",abs(i));*/
+   getch();
+ }
+
+

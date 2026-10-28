@@ -1,0 +1,30 @@
+
+  struct demo
+  {
+    int no;
+    char name[10];
+  };
+ void  input(struct demo );
+ main()
+ {
+
+ struct demo d ={1,"ram"};
+ clrscr();
+/* printf("\n Enter the Values");*/
+ input(d);
+/* printf("\n The Output IS");
+ printf("The Size is%d",sizeof(d));*/
+ getch();
+ }
+void input(struct demo a)
+
+ {
+/*   printf("\n Enter the NO:");
+   scanf("%d",&a.no);
+   printf("\n Enter the Name");
+   scanf("%s",&a.name);*/
+
+   printf("\n\tNO  : %d",a.no);
+   printf("\n\tName: %s",a.name);
+  }
+

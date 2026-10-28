@@ -1,0 +1,19 @@
+/* Reference Function  Find the min salary*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int min(int*,int*);
+	int *a,*b;
+	clrscr();
+	printf("\n40 % basic pay(a)");
+	scanf("%d",&a);
+	printf("\n10 days salary(b)");
+	scanf("%d",&b);
+	printf("\nBonus amount is :%d",min(a,b));
+	getch();
+	}
+	int min(int *x,int *y)
+	{
+	return(x<y?x:y);
+	}

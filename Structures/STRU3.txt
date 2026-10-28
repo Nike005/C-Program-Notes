@@ -1,0 +1,42 @@
+/* Used for struct Array */
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,total;
+struct student
+{
+  int rno,t,e,m;
+  char name[10];
+};
+struct student s[20];
+	clrscr();
+	for(i=1;i<3;i++)
+	{
+		printf("Enter rollno:\n");
+		scanf("%d",&s[i].rno);
+		printf("Enter Name:\n");
+		scanf("%s",&s[i].name);
+		printf("Enter Tamil:\n");
+		scanf("%d",&s[i].t);
+		printf("Enter English:\n");
+		scanf("%d",&s[i].e);
+		printf("Enter Maths:\n");
+		scanf("%d",&s[i].m);
+		total=s[i].t+s[i].e+s[i].m;
+
+	}
+		printf("\n-----------------------------------------------------");
+		printf("\n\tSno \tName\tTamil\tEnglish\tMaths\tTotal");
+		printf("\n-----------------------------------------------------");
+		for(i=1;i<3;i++)
+
+		printf("\n\t%d \t%s \t%d \t%d \t%d \t%d",s[i].rno,s[i].name,s[i].t,s[i].e,s[i].m,total);
+		printf("\n---------------------Best Of Luck---------------------");
+		getch();
+}
+
+
+
+

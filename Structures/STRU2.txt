@@ -1,0 +1,39 @@
+/* Student Mark List  used for structure */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ int total;
+ struct student
+ {
+	int sno;
+	char name[25];
+	int tam,eng,math;
+
+ };
+ struct student s;
+ clrscr();
+ s.sno=101;
+ strcpy(s.name,"Selvan");
+ s.tam=56;
+ s.eng=89;
+ s.math=78;
+ total=s.tam+s.eng+s.math;
+ printf("\n\tSno\tName\tTamil\tEnglish\tMaths\tTotal\n");
+ printf("\t%d \t%s \t%d \t%d \t%d \t%d",s.sno,s.name,s.tam,s.eng,s.math,total);
+ getch();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
